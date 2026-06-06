@@ -181,7 +181,7 @@ li {
 
 .paper-item {
   display: grid;
-  grid-template-columns: 38px 1fr;
+  grid-template-columns: 34px 1fr;
   gap: 0;
   align-items: stretch;
   margin: 0;
@@ -193,7 +193,7 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 46px;
+  min-height: 42px;
   padding: 4px 3px;
   background: #dfeef8;
   color: #30336f;
@@ -202,34 +202,34 @@ li {
 }
 
 .paper-pdf img {
-  width: 18px;
-  height: 23px;
+  width: 16px;
+  height: 20px;
   object-fit: contain;
   margin-bottom: 1px;
 }
 
 .paper-pdf span {
   display: block;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
   line-height: 1.05;
   font-weight: 400;
 }
 
 .paper-title {
   color: var(--text);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
   font-weight: 700;
-  line-height: 1.12;
+  line-height: 1.25;
 }
 
 .paper-body {
   min-width: 0;
-  padding: 4px 7px 4px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 13px;
-  line-height: 1.18;
+  padding: 4px 7px 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.28;
 }
 
 .paper-authors,
@@ -280,30 +280,30 @@ li {
   }
 
   .paper-item {
-    grid-template-columns: 36px 1fr;
+    grid-template-columns: 32px 1fr;
   }
 
   .paper-pdf {
-    min-height: 44px;
+    min-height: 40px;
     padding: 4px 3px;
   }
 
   .paper-pdf img {
-    width: 17px;
-    height: 22px;
+    width: 15px;
+    height: 19px;
   }
 
   .paper-pdf span {
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .paper-body {
     padding: 4px 6px;
-    font-size: 12px;
-    line-height: 1.2;
+    font-size: 14px;
+    line-height: 1.25;
   }
 
   .paper-title {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
