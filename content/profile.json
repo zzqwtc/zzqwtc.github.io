@@ -1,0 +1,31 @@
+{
+  "name": "Your Name",
+  "role": "Assistant Professor",
+  "department": "Department of Computer Science",
+  "university": "University Name",
+  "location": "City, Country",
+  "email": "your.name AT university.edu",
+  "photo": "assets/portrait-placeholder.png",
+  "links": [
+    {
+      "label": "Google Scholar",
+      "url": "#"
+    },
+    {
+      "label": "GitHub",
+      "url": "#"
+    },
+    {
+      "label": "CV",
+      "url": "#"
+    },
+    {
+      "label": "ORCID",
+      "url": "#"
+    }
+  ],
+  "about": [
+    "I am a researcher working on human-centered artificial intelligence, trustworthy machine learning, and computational social science. My work studies how intelligent systems affect expert decisions, user behavior, and organizational practice.",
+    "Before joining University Name, I received my Ph.D. from Institution Name and B.Eng. from Institution Name. I am interested in advising students who enjoy careful empirical work, strong engineering, and clear research questions."
+  ]
+}

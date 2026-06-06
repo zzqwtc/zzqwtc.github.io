@@ -1,0 +1,88 @@
+[
+  {
+    "category": "Surveys",
+    "title": "A Survey of Human-Centered Evaluation for Large Language Models",
+    "authors": "Your Name, Collaborator A, Collaborator B, and Collaborator C",
+    "venue": "ACM Computing Surveys",
+    "year": "2026",
+    "thumbnail": "",
+    "links": [
+      {
+        "label": "pdf",
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "category": "Surveys",
+    "title": "Trustworthy Recommendation in the Era of Foundation Models",
+    "authors": "Collaborator D, Your Name, and Collaborator E",
+    "venue": "ACM Transactions on Information Systems",
+    "year": "2025",
+    "thumbnail": "",
+    "links": [
+      {
+        "label": "pdf",
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "category": "Recent Papers",
+    "title": "Auditing Human-AI Decisions Under Distribution Shift",
+    "authors": "Your Name, Collaborator A, and Collaborator B",
+    "venue": "Conference Name",
+    "year": "2026",
+    "thumbnail": "assets/seminar-visual.png",
+    "links": [
+      {
+        "label": "pdf",
+        "url": "#"
+      },
+      {
+        "label": "code",
+        "url": "#"
+      },
+      {
+        "label": "bibtex",
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "category": "Recent Papers",
+    "title": "Institutional Frictions in Responsible AI Deployment",
+    "authors": "Your Name and Collaborator C",
+    "venue": "Journal Name",
+    "year": "2025",
+    "thumbnail": "assets/research-visual.png",
+    "links": [
+      {
+        "label": "pdf",
+        "url": "#"
+      },
+      {
+        "label": "data",
+        "url": "#"
+      },
+      {
+        "label": "bibtex",
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "category": "Recent Papers",
+    "title": "What Experts Need From Model Explanations",
+    "authors": "Your Name, Collaborator D, and Collaborator E",
+    "venue": "Preprint",
+    "year": "2025",
+    "thumbnail": "",
+    "links": [
+      {
+        "label": "pdf",
+        "url": "#"
+      }
+    ]
+  }
+]

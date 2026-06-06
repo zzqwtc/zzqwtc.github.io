@@ -1,0 +1,189 @@
+media:
+  input: assets
+  output: /assets
+
+content:
+  - name: profile
+    label: Profile
+    type: file
+    path: content/profile.json
+    format: json
+    fields:
+      - name: name
+        label: Name
+        type: string
+      - name: role
+        label: Role
+        type: string
+      - name: department
+        label: Department
+        type: string
+      - name: university
+        label: University
+        type: string
+      - name: location
+        label: Location
+        type: string
+      - name: email
+        label: Email
+        type: string
+      - name: photo
+        label: Profile photo
+        type: image
+      - name: links
+        label: Profile links
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+        fields:
+          - name: label
+            label: Label
+            type: string
+          - name: url
+            label: URL
+            type: string
+      - name: about
+        label: About paragraphs
+        type: text
+        list:
+          collapsible: true
+
+  - name: news
+    label: News
+    type: file
+    path: content/news.json
+    format: json
+    list: true
+    fields:
+      - name: date
+        label: Date
+        type: string
+      - name: text
+        label: News item
+        type: text
+
+  - name: tutorials
+    label: Tutorials
+    type: file
+    path: content/tutorials.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: venue
+        label: Venue
+        type: string
+      - name: thumbnail
+        label: Thumbnail
+        type: image
+      - name: links
+        label: Links
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+        fields:
+          - name: label
+            label: Label
+            type: string
+          - name: url
+            label: URL
+            type: string
+
+  - name: publications
+    label: Publications
+    type: file
+    path: content/publications.json
+    format: json
+    list: true
+    fields:
+      - name: category
+        label: Category
+        type: string
+      - name: title
+        label: Title
+        type: string
+      - name: authors
+        label: Authors
+        type: text
+      - name: venue
+        label: Venue
+        type: string
+      - name: year
+        label: Year
+        type: string
+      - name: thumbnail
+        label: Thumbnail
+        type: image
+      - name: links
+        label: Links
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+        fields:
+          - name: label
+            label: Label
+            type: string
+          - name: url
+            label: URL
+            type: string
+
+  - name: services
+    label: Professional Services
+    type: file
+    path: content/services.json
+    format: json
+    list: true
+    fields:
+      - name: text
+        label: Service
+        type: text
+
+  - name: education
+    label: Education
+    type: file
+    path: content/education.json
+    format: json
+    list: true
+    fields:
+      - name: institution
+        label: Institution
+        type: string
+      - name: degree
+        label: Degree
+        type: string
+      - name: period
+        label: Period
+        type: string
+      - name: extra
+        label: Extra
+        type: text
+
+  - name: links
+    label: Useful Links
+    type: file
+    path: content/links.json
+    format: json
+    list: true
+    fields:
+      - name: label
+        label: Label
+        type: string
+      - name: url
+        label: URL
+        type: string
+
+settings:
+  hide: false
+  commit:
+    templates:
+      create: "content: create {path}"
+      update: "content: update {path}"
+      delete: "content: delete {path}"

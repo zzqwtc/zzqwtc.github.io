@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Personal academic homepage with research interests, news, publications, services, education, and contact information."
+    />
+    <title>Academic Homepage</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="profile-header" id="home" aria-label="Profile summary">
+        <div class="profile-photo">
+          <img id="profile-photo" src="assets/portrait-placeholder.png" alt="Portrait" width="188" height="232" />
+        </div>
+
+        <div class="profile-info">
+          <h1 id="profile-name">Your Name</h1>
+          <p class="title" id="profile-role">Assistant Professor</p>
+          <p id="profile-department">Department of Computer Science</p>
+          <p id="profile-university">University Name</p>
+          <p id="profile-location">City, Country</p>
+          <p class="email" id="profile-email">your.name AT university.edu</p>
+          <p class="profile-links" id="profile-links"></p>
+        </div>
+      </section>
+
+      <section class="section about" aria-labelledby="about-title">
+        <h2 id="about-title">About Me</h2>
+        <div id="about-content"></div>
+      </section>
+
+      <section class="section news" id="news" aria-labelledby="news-title">
+        <h2 id="news-title">News</h2>
+        <ul class="news-list" id="news-list"></ul>
+      </section>
+
+      <section class="section tutorials" id="tutorials" aria-labelledby="tutorials-title">
+        <h2 id="tutorials-title">Tutorials</h2>
+        <div id="tutorial-list"></div>
+      </section>
+
+      <section class="section publications" id="publications" aria-labelledby="publications-title">
+        <h2 id="publications-title">Selected Publications</h2>
+        <p class="note">
+          Please find the latest and complete list at
+          <a href="#" id="scholar-link">Google Scholar</a>.
+        </p>
+        <div id="publication-list"></div>
+      </section>
+
+      <section class="section services" id="services" aria-labelledby="services-title">
+        <h2 id="services-title">Professional Services</h2>
+        <ul id="service-list"></ul>
+      </section>
+
+      <section class="section education" id="education" aria-labelledby="education-title">
+        <h2 id="education-title">Education</h2>
+        <div id="education-list"></div>
+      </section>
+
+      <section class="section links" id="links" aria-labelledby="links-title">
+        <h2 id="links-title">Useful Links</h2>
+        <ul id="useful-links"></ul>
+      </section>
+
+      <footer class="footer" id="last-updated">Last update: 2026.06.06.</footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
