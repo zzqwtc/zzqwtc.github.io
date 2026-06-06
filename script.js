@@ -114,9 +114,8 @@ const renderPaper = (paper) => {
   return `
     <li class="paper-item">
       <a class="paper-pdf" href="${escapeHtml(pdfUrl)}" aria-label="PDF for ${escapeHtml(paper.title)}">
-        <img src="assets/pdf.png" alt="" width="38" height="48" onerror="this.hidden=true; this.nextElementSibling.hidden=false;" />
-        <span hidden>pdf</span>
-        <strong>pdf</strong>
+        <img src="assets/pdf.png" alt="" width="30" height="38" onerror="this.hidden=true;" />
+        <span>pdf</span>
       </a>
       <span class="paper-body">
         <a class="paper-title" href="${escapeHtml(pdfUrl)}">${escapeHtml(paper.title)}</a>
