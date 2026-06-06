@@ -16,6 +16,12 @@
     "title": "Contactless Arrhythmia Detection Via Diversity-Invariant Contrastive mmWave Sensing",
     "authors": "Xinmeng Cai, Jinbo Chen, Haoyu Wang, Yuqin Yuan, Guixin Xu, Ziqian Zhang, Dongheng Zhang, Yang Hu, Qibin Sun, Yan Chen",
     "venue": "IEEE Transactions on Mobile Computing",
-    "year": "2026"
+    "year": "2026",
+    "links": [
+      {
+        "label": "pdf",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11433080"
+      }
+    ]
   }
 ]
