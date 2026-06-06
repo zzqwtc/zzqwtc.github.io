@@ -9,6 +9,18 @@ const escapeHtml = (value) =>
 const linkHtml = (link) =>
   `<a href="${escapeHtml(link.url || "#")}">${escapeHtml(link.label || "link")}</a>`;
 
+const assetPath = (value, fallback = "") => {
+  const path = String(value || fallback || "").trim();
+  if (!path) return "";
+  if (/^(https?:|data:|blob:)/i.test(path)) return path;
+
+  let normalized = path.replace(/^\/+/, "");
+  if (normalized.startsWith("profile/")) {
+    normalized = normalized.slice("profile/".length);
+  }
+  return normalized;
+};
+
 const getJson = async (path) => {
   const response = await fetch(path);
   if (!response.ok) throw new Error(`Unable to load ${path}`);
@@ -27,7 +39,7 @@ const renderProfile = (profile) => {
   byId("profile-email").textContent = profile.email || "";
 
   const photo = byId("profile-photo");
-  photo.src = profile.photo || "assets/portrait-placeholder.png";
+  photo.src = assetPath(profile.photo, "assets/portrait-placeholder.png");
   photo.alt = `Portrait of ${profile.name || "profile owner"}`;
 
   byId("profile-links").innerHTML = (profile.links || [])
@@ -55,7 +67,7 @@ const renderTutorials = (items) => {
     .map(
       (item) => `
         <div class="tutorial-item">
-          <img src="${escapeHtml(item.thumbnail || "assets/research-visual.png")}" alt="Tutorial thumbnail" width="120" height="82" />
+          <img src="${escapeHtml(assetPath(item.thumbnail, "assets/research-visual.png"))}" alt="Tutorial thumbnail" width="120" height="82" />
           <div>
             <p><a href="${escapeHtml(item.links?.[0]?.url || "#")}">${escapeHtml(item.title)}</a></p>
             <p class="venue">${escapeHtml(item.venue)}</p>
@@ -91,7 +103,7 @@ const renderPaper = (paper) => {
     <li class="paper-item ${hasThumb ? "paper-item--thumb" : "paper-item--text"}">
       ${
         hasThumb
-          ? `<span class="paper-thumb"><img src="${escapeHtml(paper.thumbnail)}" alt="" width="92" height="64" /></span>`
+          ? `<span class="paper-thumb"><img src="${escapeHtml(assetPath(paper.thumbnail))}" alt="" width="92" height="64" /></span>`
           : ""
       }
       <span class="paper-badge">${linkHtml(primary)}</span>
