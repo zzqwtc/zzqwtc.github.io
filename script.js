@@ -106,25 +106,24 @@ const renderPublications = (items) => {
 };
 
 const renderPaper = (paper) => {
-  const hasThumb = Boolean(paper.thumbnail);
   const links = paper.links || [];
   const primary = links[0] || { label: "pdf", url: "#" };
+  const pdfUrl = primary.url || "#";
   const extra = links.slice(1).map(linkHtml).join('<span>|</span>');
 
   return `
-    <li class="paper-item ${hasThumb ? "paper-item--thumb" : "paper-item--text"}">
-      ${
-        hasThumb
-          ? `<span class="paper-thumb"><img src="${escapeHtml(assetPath(paper.thumbnail))}" alt="" width="92" height="64" /></span>`
-          : ""
-      }
-      <span class="paper-badge">${linkHtml(primary)}</span>
+    <li class="paper-item">
+      <a class="paper-pdf" href="${escapeHtml(pdfUrl)}" aria-label="PDF for ${escapeHtml(paper.title)}">
+        <img src="assets/pdf.png" alt="" width="38" height="48" onerror="this.hidden=true; this.nextElementSibling.hidden=false;" />
+        <span hidden>pdf</span>
+        <strong>pdf</strong>
+      </a>
       <span class="paper-body">
-        <a class="paper-title" href="${escapeHtml(primary.url || "#")}">${escapeHtml(paper.title)}</a>
+        <a class="paper-title" href="${escapeHtml(pdfUrl)}">${escapeHtml(paper.title)}</a>
         <br />
-        ${escapeHtml(paper.authors)}
+        <span class="paper-authors">${escapeHtml(paper.authors)}</span>
         <br />
-        <em>${escapeHtml(paper.venue)}</em>, ${escapeHtml(paper.year)}
+        <span class="paper-venue">${escapeHtml(paper.venue)} (${escapeHtml(paper.year)})</span>
         ${extra ? `<br />${extra}` : ""}
       </span>
     </li>`;
