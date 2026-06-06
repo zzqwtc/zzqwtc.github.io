@@ -5,15 +5,15 @@
   "university": "University of Science and Technology of China (USTC)",
   "location": "Hefei, China",
   "email": "zzqwtc@mail.ustc.edu.cn",
-  "photo": "/assets/portrait-placeholder.png",
+  "photo": "/assets/微信图片_20260606224828_91_4.jpg",
   "links": [
     {
       "label": "Google Scholar",
-      "url": "#"
+      "url": "https://scholar.google.com/citations?user=E6y--gkAAAAJ"
     },
     {
       "label": "GitHub",
-      "url": "#"
+      "url": "https://github.com/zzqwtc"
     },
     {
       "label": "CV",
@@ -21,7 +21,7 @@
     },
     {
       "label": "ORCID",
-      "url": "#"
+      "url": "https://orcid.org/my-orcid?orcid=0009-0003-7193-2702"
     }
   ],
   "about": [
