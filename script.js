@@ -21,10 +21,21 @@ const assetPath = (value, fallback = "") => {
   return normalized;
 };
 
-const getJson = async (path) => {
-  const response = await fetch(path);
-  if (!response.ok) throw new Error(`Unable to load ${path}`);
-  return response.json();
+const asArray = (value) => {
+  if (Array.isArray(value)) return value;
+  if (value !== undefined && value !== null && value !== "") return [value];
+  return [];
+};
+
+const getJson = async (path, fallback) => {
+  try {
+    const response = await fetch(path);
+    if (!response.ok) throw new Error(`Unable to load ${path}`);
+    return response.json();
+  } catch (error) {
+    console.error(error);
+    return fallback;
+  }
 };
 
 const byId = (id) => document.getElementById(id);
@@ -42,20 +53,20 @@ const renderProfile = (profile) => {
   photo.src = assetPath(profile.photo, "assets/portrait-placeholder.png");
   photo.alt = `Portrait of ${profile.name || "profile owner"}`;
 
-  byId("profile-links").innerHTML = (profile.links || [])
+  byId("profile-links").innerHTML = asArray(profile.links)
     .map(linkHtml)
     .join('<span>|</span>');
 
-  const scholar = (profile.links || []).find((link) => /scholar/i.test(link.label || ""));
+  const scholar = asArray(profile.links).find((link) => /scholar/i.test(link.label || ""));
   if (scholar) byId("scholar-link").href = scholar.url;
 
-  byId("about-content").innerHTML = (profile.about || [])
+  byId("about-content").innerHTML = asArray(profile.about)
     .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
     .join("");
 };
 
 const renderNews = (items) => {
-  byId("news-list").innerHTML = items
+  byId("news-list").innerHTML = asArray(items)
     .map(
       (item) => `<li><time>${escapeHtml(item.date)}</time><span>${escapeHtml(item.text)}</span></li>`
     )
@@ -63,7 +74,7 @@ const renderNews = (items) => {
 };
 
 const renderTutorials = (items) => {
-  byId("tutorial-list").innerHTML = items
+  byId("tutorial-list").innerHTML = asArray(items)
     .map(
       (item) => `
         <div class="tutorial-item">
@@ -79,15 +90,16 @@ const renderTutorials = (items) => {
 };
 
 const renderPublications = (items) => {
-  const categories = [...new Set(items.map((item) => item.category || "Publications"))];
+  const papers = asArray(items);
+  const categories = [...new Set(papers.map((item) => item.category || "Publications"))];
 
   byId("publication-list").innerHTML = categories
     .map((category) => {
-      const papers = items.filter((item) => (item.category || "Publications") === category);
+      const categoryPapers = papers.filter((item) => (item.category || "Publications") === category);
       return `
         <h3>${escapeHtml(category)}</h3>
         <ul class="paper-list">
-          ${papers.map(renderPaper).join("")}
+          ${categoryPapers.map(renderPaper).join("")}
         </ul>`;
     })
     .join("");
@@ -119,13 +131,13 @@ const renderPaper = (paper) => {
 };
 
 const renderServices = (items) => {
-  byId("service-list").innerHTML = items
+  byId("service-list").innerHTML = asArray(items)
     .map((item) => `<li>${escapeHtml(item.text || item)}</li>`)
     .join("");
 };
 
 const renderEducation = (items) => {
-  byId("education-list").innerHTML = items
+  byId("education-list").innerHTML = asArray(items)
     .map(
       (item) => `
         <p>
@@ -139,37 +151,29 @@ const renderEducation = (items) => {
 };
 
 const renderLinks = (items) => {
-  byId("useful-links").innerHTML = items
+  byId("useful-links").innerHTML = asArray(items)
     .map((item) => `<li>${linkHtml(item)}</li>`)
     .join("");
 };
 
 const main = async () => {
-  try {
-    const [profile, news, tutorials, publications, services, education, links] = await Promise.all([
-      getJson("content/profile.json"),
-      getJson("content/news.json"),
-      getJson("content/tutorials.json"),
-      getJson("content/publications.json"),
-      getJson("content/services.json"),
-      getJson("content/education.json"),
-      getJson("content/links.json")
-    ]);
+  const [profile, news, tutorials, publications, services, education, links] = await Promise.all([
+    getJson("content/profile.json", {}),
+    getJson("content/news.json", []),
+    getJson("content/tutorials.json", []),
+    getJson("content/publications.json", []),
+    getJson("content/services.json", []),
+    getJson("content/education.json", []),
+    getJson("content/links.json", [])
+  ]);
 
-    renderProfile(profile);
-    renderNews(news);
-    renderTutorials(tutorials);
-    renderPublications(publications);
-    renderServices(services);
-    renderEducation(education);
-    renderLinks(links);
-  } catch (error) {
-    document.body.insertAdjacentHTML(
-      "afterbegin",
-      `<p class="load-error">Content failed to load. Please check the JSON files in the content folder.</p>`
-    );
-    console.error(error);
-  }
+  renderProfile(profile);
+  renderNews(news);
+  renderTutorials(tutorials);
+  renderPublications(publications);
+  renderServices(services);
+  renderEducation(education);
+  renderLinks(links);
 };
 
 main();
