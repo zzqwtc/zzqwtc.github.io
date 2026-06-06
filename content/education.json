@@ -1,14 +1,12 @@
 [
   {
-    "institution": "Institution Name",
-    "degree": "Ph.D. in Computer Science",
-    "period": "2020-2025",
-    "extra": "Advisor: Prof. Advisor Name"
+    "institution": "University of Science and Technology of China",
+    "degree": "Ph.D. in Cyberspace Security",
+    "period": "2023 - Now"
   },
   {
-    "institution": "Institution Name",
-    "degree": "B.Eng. in Computer Science",
-    "period": "2016-2020",
-    "extra": ""
+    "institution": "Anhui Univerisity",
+    "degree": "B.Eng. in Cyberspace Security",
+    "period": "2019 - 2023"
   }
 ]
