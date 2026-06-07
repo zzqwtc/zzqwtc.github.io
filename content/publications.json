@@ -1,5 +1,6 @@
 [
   {
+    "category": "Conference",
     "title": "Robust HRV Monitoring via Massive Radio Sensing",
     "authors": "Guixin Xu, Jinbo Chen, Haoyu Wang, Yuqin Yuan, Ganlin Zhang, Ziqian Zhang, Dongheng Zhang, Yang Hu, Qibin Sun, Yan Chen",
     "venue": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
@@ -12,6 +13,7 @@
     ]
   },
   {
+    "category": "Journal",
     "title": "Contactless Arrhythmia Detection Via Diversity-Invariant Contrastive mmWave Sensing",
     "authors": "Xinmeng Cai, Jinbo Chen, Haoyu Wang, Yuqin Yuan, Guixin Xu, Ziqian Zhang, Dongheng Zhang, Yang Hu, Qibin Sun, Yan Chen",
     "venue": "IEEE Transactions on Mobile Computing",
