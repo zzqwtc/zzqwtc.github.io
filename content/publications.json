@@ -14,19 +14,6 @@
   },
   {
     "category": "Journal",
-    "title": "Contactless Arrhythmia Detection Via Diversity-Invariant Contrastive mmWave Sensing",
-    "authors": "Xinmeng Cai, Jinbo Chen, Haoyu Wang, Yuqin Yuan, Guixin Xu, Ziqian Zhang, Dongheng Zhang, Yang Hu, Qibin Sun, Yan Chen",
-    "venue": "IEEE Transactions on Mobile Computing",
-    "year": "2026",
-    "links": [
-      {
-        "label": "pdf",
-        "url": "https://ieeexplore.ieee.org/abstract/document/11433080"
-      }
-    ]
-  },
-  {
-    "category": "Journal",
     "title": "Cardiophone: Ubiquitous Cardiovascular Diseases Screening with Smartphone",
     "authors": "Yutong Yuan, Dongheng Zhang, Jianyang Wang, Jinzhong Deng, Ziqian Zhang, Dan Li, Yang Hu, Qibin Sun, Yan Chen",
     "venue": "IEEE Transactions on Mobile Computing",
@@ -35,6 +22,19 @@
       {
         "label": "pdf",
         "url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11659128"
+      }
+    ]
+  },
+  {
+    "category": "Journal",
+    "title": "Contactless Arrhythmia Detection Via Diversity-Invariant Contrastive mmWave Sensing",
+    "authors": "Xinmeng Cai, Jinbo Chen, Haoyu Wang, Yuqin Yuan, Guixin Xu, Ziqian Zhang, Dongheng Zhang, Yang Hu, Qibin Sun, Yan Chen",
+    "venue": "IEEE Transactions on Mobile Computing",
+    "year": "2026",
+    "links": [
+      {
+        "label": "pdf",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11433080"
       }
     ]
   }
