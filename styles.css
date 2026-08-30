@@ -232,9 +232,10 @@ li {
   line-height: 1.28;
 }
 
-.paper-authors,
-.paper-venue {
+.paper-body .paper-authors,
+.paper-body .paper-venue {
   color: var(--text);
+  margin: 0;
 }
 
 .footer {
