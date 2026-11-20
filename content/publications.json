@@ -14,6 +14,12 @@
   },
   {
     "category": "Journal",
+    "title": "RF-CabinCare: RF-Based Heartbeat Sensing in Vehicle Cabin Environments",
+    "authors": "Jianyang Wang, Yadong Li, Binbin Zhang, Ziqian Zhang, Rui Zhang, Lingna Ding, Yang Hu, Yan Chen",
+    "year": "2026"
+  },
+  {
+    "category": "Journal",
     "title": "Self-supervised Learning for Contactless Cardiac Diagnosis with Beamformed Radar Signals",
     "authors": "Yaqi Wang, Zhi Lu, Aoxiang Yue, Zhenzhen Cao, Ziqian Zhang, Yang Hu, Yan Chen",
     "venue": "IEEE Internet of Things Journal",
@@ -44,11 +50,5 @@
         "url": "https://ieeexplore.ieee.org/abstract/document/11433080"
       }
     ]
-  },
-  {
-    "category": "Journal",
-    "title": "RF-CabinCare: RF-Based Heartbeat Sensing in Vehicle Cabin Environments",
-    "authors": "Jianyang Wang, Yadong Li, Binbin Zhang, Ziqian Zhang, Rui Zhang, Lingna Ding, Yang Hu, Yan Chen",
-    "year": "2026"
   }
 ]
